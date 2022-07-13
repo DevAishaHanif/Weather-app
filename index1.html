@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK-1</title>
+    <link rel="stylesheet" type="text/css" href="style1.css"/>
+</head>
+<body>
+                           <!-- HTML CODE -->
+    <div class="Wrapper">
+     <div class="container">
+        <div class="BGimg">
+          <h1 class="head1"><i>TEMPERATURE APP </i></h1> 
+            <form onsubmit="calculate();  return false;" class="FORM">
+            <label>Temperature :</label> 
+            <input type="number" min="1" id="temp" placeholder="Enter the Temperature !!"required/>
+             <p>
+                <button type="submit" class="btn"><i>CHECK</i></button>
+             </p>
+         </form>
+               <h2 id="result"></h2>
+          </div>
+      </div>
+   </div>
+ 
+
+                        <!-- JAVASCRIPT CODE -->
+ <script>
+     function calculate() {
+        let temperature = document.querySelector("#temp").value;
+
+        if (temperature > 30) {
+        document.querySelector("#result")
+        .innerHTML = "It's too HOT :-(";
+
+     }  else if (temperature > 25) {
+        document.querySelector("#result")
+        .innerHTML = "It's PLEASENT outside :-)";
+
+     }  else if (temperature > 20) {
+        document.querySelector("#result")
+        .innerHTML = "if you are riding a bike please carry JACKET..";
+
+     }  else if (temperature > 10) {
+        document.querySelector("#result")
+        .innerHTML = "Probably you would need a JACKET..";
+
+     }  else {
+        document.querySelector("#result")
+        .innerHTML = "It's FREEZING outside..";
+
+     }
+
+}
+
+     </script>
+   </body>
+</html>
